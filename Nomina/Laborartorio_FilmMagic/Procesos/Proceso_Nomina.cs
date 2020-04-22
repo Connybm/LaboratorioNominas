@@ -20,13 +20,14 @@ namespace Laborartorio_FilmMagic.Procesos
         public Proceso_Nomina()
         {
             InitializeComponent();
-            scampo = logic.siguiente("renta_encabezado", "pkidrentaencabezado");
-            dtp_fecha.Format = DateTimePickerFormat.Custom;
-            dtp_fecha.CustomFormat = "yyyy/MM/dd";
+            scampo = logic.siguiente("nominaE", "codigo_nomina");
+            dtp_fechaI.Format = DateTimePickerFormat.Custom;
+            dtp_fechaI.CustomFormat = "yyyy/MM/dd";
 
-            dtp_FechaE.Format = DateTimePickerFormat.Custom;
-            dtp_FechaE.CustomFormat = "yyyy/MM/dd";
-            Txt_Codigo.Text = scampo;
+            dtp_FechaF.Format = DateTimePickerFormat.Custom;
+            dtp_FechaF.CustomFormat = "yyyy/MM/dd";
+            txt_Codigo1.Text = scampo;
+            txt_Codigo2.Text = scampo;
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
@@ -39,31 +40,55 @@ namespace Laborartorio_FilmMagic.Procesos
             this.Dispose();
         }
 
-        private void Btn_buscarM_Click(object sender, EventArgs e)
+       
+        private void Btn_buscarS_Click(object sender, EventArgs e)
         {
-            Frm_consultaPuesto memb = new Frm_consultaPuesto();
+            Frm_consultaEmpleado memb = new Frm_consultaEmpleado();
             memb.ShowDialog();
 
             if (memb.DialogResult == DialogResult.OK)
             {
-
-                Txt_membresia.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
+                txt_empleado.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
                       Cells[0].Value.ToString();
-
             }
-        }
-
-        private void Btn_buscarS_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.insertarEncabezadoRenta(Txt_Codigo.Text,Txt_membresia.Text,dtp_fecha.Text,dtp_FechaE.Text,Txt_sucursal.Text);
+            //------ ENCABEZADO
+            OdbcDataReader encabezado = logic.insertarEncabezadoNomina(txt_Codigo1.Text, dtp_fechaI.Text, dtp_FechaF.Text);
             MessageBox.Show("Datos registrados.");
-            
-            Txt_Codigo.Text = logic.siguiente("renta_encabezado", "pkidrentaencabezado");
+            //------ DETALLE
+            OdbcDataReader detalle = logic.insertarDetalleNomina(txt_Codigo1.Text, txt_empleado.Text, txt_concepto.Text, txt_valor.Text);
+            MessageBox.Show("Datos registrados.");
+
+            txt_Codigo1.Text = logic.siguiente("nominaE", "codigo_nomina");
+            txt_Codigo2.Text = logic.siguiente("nominaD", "codigo_nomina");
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+           
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_BuscarC_Click(object sender, EventArgs e)
+        {
+            Frm_consultaConcepto memb = new Frm_consultaConcepto();
+            memb.ShowDialog();
+
+            if (memb.DialogResult == DialogResult.OK)
+            {
+                txt_concepto.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
+                      Cells[0].Value.ToString();
+            }
         }
     }
 }

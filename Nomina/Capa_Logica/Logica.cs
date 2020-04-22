@@ -230,9 +230,15 @@ namespace Capa_Logica
         }
 
         //----------INSERTAR ENCABEZADO
-        public OdbcDataReader insertarEncabezadoRenta(string sCodigo, string sMembresia, string sFechaA, string sFechaE, string sSucursal)
+        public OdbcDataReader insertarEncabezadoNomina(string sCodigo, string sFechaI, string sFechaF)
         {
-            return sn.InsertarRentaEncabezado(sCodigo, sMembresia, sFechaA, sFechaE, sSucursal);
+            return sn.InsertarNominaEncabezado(sCodigo, sFechaI, sFechaF);
+        }
+
+        //----------INSERTAR DETALLE
+        public OdbcDataReader insertarDetalleNomina(string sCodigo, string sEmpleado, string sConcepto, string sValor)
+        {
+            return sn.InsertarNominaDetalle(sCodigo, sEmpleado, sConcepto, sValor);
         }
     }
 }
