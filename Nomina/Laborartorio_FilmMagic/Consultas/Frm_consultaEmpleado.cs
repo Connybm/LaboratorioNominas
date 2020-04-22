@@ -24,12 +24,13 @@ namespace Laborartorio_FilmMagic.Consultas
 
         public void MostrarConsulta()
         {
-            OdbcDataReader mostrar = logic.consultarCliente();
+            OdbcDataReader mostrar = logic.consultarEmpleado();
             try
             {
                 while (mostrar.Read())
                 {
-                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(5), mostrar.GetString(6));
+                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), 
+                        mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
                 }
             }
             catch (Exception err)

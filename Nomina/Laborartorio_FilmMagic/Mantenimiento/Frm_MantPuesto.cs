@@ -20,15 +20,9 @@ namespace Laborartorio_FilmMagic.Mantenimiento
         public Frm_MantPuesto()
         {
             InitializeComponent();
-            scampo = logic.siguiente("membresia", "pkidmembresia");
-            dtp_fecha.Format = DateTimePickerFormat.Custom;
-            dtp_fecha.CustomFormat = "yyyy/MM/dd";
-
-            dtp_FechaC.Format = DateTimePickerFormat.Custom;
-            dtp_FechaC.CustomFormat = "yyyy/MM/dd";
+            scampo = logic.siguiente("puesto", "codigo_puesto");            
             Txt_Cod.Text = scampo;
             bloqueartxt();
-
         }
 
         public void bloqueartxt()
@@ -40,10 +34,9 @@ namespace Laborartorio_FilmMagic.Mantenimiento
             /*------------------------*/
             Txt_Cod.Enabled = false;
             txt_Nombre.Enabled = false;
-            dtp_fecha.Enabled = false;
-            dtp_FechaC.Enabled = false;
-            
+            Txt_estado.Enabled = false;            
         }
+
         public void desbloqueartxt()
         {
             /*------------------------*/
@@ -51,25 +44,19 @@ namespace Laborartorio_FilmMagic.Mantenimiento
             Btn_editar.Enabled = true;
             Btn_borrar.Enabled = true;
             /*------------------------*/
-
             Txt_Cod.Enabled = false;
             txt_Nombre.Enabled = true;
-            dtp_fecha.Enabled = true;
-            dtp_FechaC.Enabled = true;
-            
+            Txt_estado.Enabled = true;
         }
 
         public void limpiar()
         {
             Txt_Cod.Enabled = false;
             txt_Nombre.Enabled = false;
-            dtp_fecha.Enabled = false;
-            dtp_FechaC.Enabled = false;
+            Txt_estado.Enabled = false;
             
             Txt_Cod.Text = "";
-            txt_Nombre.Text = "";
-            
-
+            txt_Nombre.Text = "";           
         }
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
@@ -79,7 +66,7 @@ namespace Laborartorio_FilmMagic.Mantenimiento
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.InsertarMembresia(Txt_Cod.Text, txt_Nombre.Text, dtp_fecha.Text,dtp_FechaC.Text);
+            OdbcDataReader cita = logic.InsertarPuesto(Txt_Cod.Text, txt_Nombre.Text, Txt_estado.Text);
             MessageBox.Show("Datos registrados.");
             limpiar();
             Txt_Cod.Text = logic.siguiente("sucursal", "pkidmembresia");
@@ -87,13 +74,13 @@ namespace Laborartorio_FilmMagic.Mantenimiento
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.eliminarMembresia(Txt_Cod.Text);
+            OdbcDataReader cita = logic.eliminarPuesto(Txt_Cod.Text);
             MessageBox.Show("Eliminado Correctamentee.");
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.modificarMembresia(Txt_Cod.Text, txt_Nombre.Text,dtp_fecha.Text,dtp_FechaC.Text);
+            OdbcDataReader cita = logic.modificarPuesto(Txt_Cod.Text, txt_Nombre.Text,Txt_estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
         }
 
@@ -108,10 +95,8 @@ namespace Laborartorio_FilmMagic.Mantenimiento
                       Cells[0].Value.ToString();
                 txt_Nombre.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
                       Cells[1].Value.ToString();
-                dtp_fecha.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
-                      Cells[2].Value.ToString();
-                dtp_FechaC.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
-                      Cells[3].Value.ToString();
+                Txt_estado.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
+                      Cells[2].Value.ToString();                
             }
         }
 
@@ -124,5 +109,6 @@ namespace Laborartorio_FilmMagic.Mantenimiento
         {
             this.Dispose();
         }
+
     }
 }

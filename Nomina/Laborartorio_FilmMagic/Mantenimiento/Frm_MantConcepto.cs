@@ -21,7 +21,7 @@ namespace Laborartorio_FilmMagic
         public Mnt_Concepto()
         {
             InitializeComponent();
-            scampo = logic.siguiente("conceptos", "pkidconcepto");
+            scampo = logic.siguiente("concepto", "codigo_concepto");
             Txt_Cod.Text = scampo;
             bloqueartxt();
         }
@@ -36,8 +36,7 @@ namespace Laborartorio_FilmMagic
             Txt_Cod.Enabled = false;
             txt_Nombre.Enabled = false;
             txt_Descripcion.Enabled = false;
-            txt_Valor.Enabled = false;
-            txt_TipoOp.Enabled = false;
+            txt_Valor.Enabled = false;            
         }
         public void desbloqueartxt()
         {
@@ -45,13 +44,11 @@ namespace Laborartorio_FilmMagic
             Btn_guardar.Enabled = true;
             Btn_editar.Enabled = true;
             Btn_borrar.Enabled = true;
-            /*------------------------*/
-            
+            /*------------------------*/            
             Txt_Cod.Enabled = false;
             txt_Nombre.Enabled = true;
             txt_Descripcion.Enabled = true;
             txt_Valor.Enabled = true;
-            txt_TipoOp.Enabled = true;
         }
 
         public void limpiar()
@@ -60,13 +57,10 @@ namespace Laborartorio_FilmMagic
             txt_Nombre.Enabled = false;
             txt_Descripcion.Enabled = false;
             txt_Valor.Enabled = false;
-            txt_TipoOp.Enabled = false;
             Txt_Cod.Text = "";
             txt_Nombre.Text = "";
             txt_Descripcion.Text = "";
             txt_Valor.Text = "";
-            txt_TipoOp.Text = "";
-            
         }
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
@@ -103,14 +97,12 @@ namespace Laborartorio_FilmMagic
                       Cells[2].Value.ToString();
                 txt_Valor.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
                       Cells[3].Value.ToString();
-                txt_TipoOp.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
-                      Cells[4].Value.ToString();
             }
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.modificarConcepto(Txt_Cod.Text, txt_Nombre.Text, txt_Descripcion.Text, txt_Valor.Text,txt_TipoOp.Text);
+            OdbcDataReader cita = logic.modificarConcepto(Txt_Cod.Text, txt_Nombre.Text, txt_Descripcion.Text, txt_Valor.Text);
             
             MessageBox.Show("Datos modificados correctamente.");
         }

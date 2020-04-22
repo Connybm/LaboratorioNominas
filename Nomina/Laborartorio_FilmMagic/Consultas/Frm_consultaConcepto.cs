@@ -22,7 +22,6 @@ namespace Laborartorio_FilmMagic.Consultas
             MostrarConsulta();
         }
 
-
         public void MostrarConsulta()
         {
             OdbcDataReader mostrar = logic.consultarConcepto();
@@ -30,7 +29,7 @@ namespace Laborartorio_FilmMagic.Consultas
             {
                 while (mostrar.Read())
                 {
-                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3),mostrar.GetString(4));
+                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3));
                 }
             }
             catch (Exception err)

@@ -20,11 +20,9 @@ namespace Laborartorio_FilmMagic.Mantenimiento
         public Frm_MantEmpleado()
         {
             InitializeComponent();
-            scampo = logic.siguiente("cliente", "pkidcliente");
-            dtp_fecha.Format = DateTimePickerFormat.Custom;
-            dtp_fecha.CustomFormat = "yyyy/MM/dd";
+            scampo = logic.siguiente("empleado", "codigo_empleado");
             bloqueartxt();
-            Txt_Cod.Text = scampo;
+            Txt_Codigo.Text = scampo;
         }
         public void bloqueartxt()
         {
@@ -33,12 +31,12 @@ namespace Laborartorio_FilmMagic.Mantenimiento
             Btn_editar.Enabled = false;
             Btn_borrar.Enabled = false;
             /*------------------------*/
-            Txt_Cod.Enabled = false;
+            Txt_Codigo.Enabled = false;
             txt_Nombre.Enabled = false;
-            txt_Direccion.Enabled = false;
-            txt_Membresia.Enabled = false;
-            dtp_fecha.Enabled = false;
-            txt_Telefono.Enabled = false;
+            txt_Cpuesto.Enabled = false;
+            txt_estatus.Enabled = false;
+            Txt_sueldo.Enabled = false;
+            txt_CDepartamento.Enabled = false;
         }
         public void desbloqueartxt()
         {
@@ -47,30 +45,28 @@ namespace Laborartorio_FilmMagic.Mantenimiento
             Btn_editar.Enabled = true;
             Btn_borrar.Enabled = true;
             /*------------------------*/
-
-            Txt_Cod.Enabled = false;
+            Txt_Codigo.Enabled = false;
             txt_Nombre.Enabled = true;
-            txt_Direccion.Enabled = true;
-            txt_Membresia.Enabled = true;
-            dtp_fecha.Enabled = true;
-            txt_Telefono.Enabled = true;
+            txt_Cpuesto.Enabled = true;
+            txt_estatus.Enabled = true;
+            Txt_sueldo.Enabled = true;
+            txt_CDepartamento.Enabled = true;
         }
 
         public void limpiar()
         {
-            Txt_Cod.Enabled = false;
+            Txt_Codigo.Enabled = false;
             txt_Nombre.Enabled = false;
-            txt_Direccion.Enabled = false;
-            txt_Membresia.Enabled = false;
-            dtp_fecha.Enabled = false;
-            txt_Telefono.Enabled = false;
-            Txt_Cod.Text = "";
+            txt_Cpuesto.Enabled = false;
+            txt_estatus.Enabled = false;
+            Txt_sueldo.Enabled = false;
+            txt_CDepartamento.Enabled = false;
+            Txt_Codigo.Text = "";
             txt_Nombre.Text = "";
-            txt_Telefono.Text = "";
-            txt_Membresia.Text = "";
-            txt_Direccion.Text = "";
-            
-
+            txt_CDepartamento.Text = "";
+            txt_estatus.Text = "";
+            txt_Cpuesto.Text = "";
+            Txt_sueldo.Text = "";
         }
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
@@ -80,22 +76,24 @@ namespace Laborartorio_FilmMagic.Mantenimiento
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.modificarCliente(Txt_Cod.Text, txt_Nombre.Text,txt_Direccion.Text,txt_Telefono.Text,txt_Membresia.Text);
+            OdbcDataReader cita = logic.modificarEmpleado(Txt_Codigo.Text, txt_Nombre.Text,txt_Cpuesto.Text,
+                txt_CDepartamento.Text,Txt_sueldo.Text,txt_estatus.Text);
 
             MessageBox.Show("Datos modificados correctamente.");
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.InsertarCliente(Txt_Cod.Text, txt_Nombre.Text,txt_Direccion.Text,txt_Telefono.Text,txt_Membresia.Text,dtp_fecha.Text);
+            OdbcDataReader cita = logic.InsertarEmpleado(Txt_Codigo.Text, txt_Nombre.Text,txt_Cpuesto.Text,
+                txt_CDepartamento.Text,Txt_sueldo.Text,txt_estatus.Text);
             MessageBox.Show("Datos registrados.");
             limpiar();
-            Txt_Cod.Text = logic.siguiente("cliente", "pkidcliente");
+            Txt_Codigo.Text = logic.siguiente("cliente", "pkidcliente");
         }
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.eliminarCliente(Txt_Cod.Text);
+            OdbcDataReader cita = logic.eliminarEmpleado(Txt_Codigo.Text);
             MessageBox.Show("Eliminado Correctamentee.");
         }
 
@@ -106,17 +104,17 @@ namespace Laborartorio_FilmMagic.Mantenimiento
 
             if (cliente.DialogResult == DialogResult.OK)
             {
-                Txt_Cod.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
+                Txt_Codigo.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
                       Cells[0].Value.ToString();
                 txt_Nombre.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
                       Cells[1].Value.ToString();
-                txt_Direccion.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
+                txt_Cpuesto.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
                       Cells[2].Value.ToString();
-                txt_Telefono.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
+                txt_CDepartamento.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
                       Cells[3].Value.ToString();
-                dtp_fecha.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
+                Txt_sueldo.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
                       Cells[4].Value.ToString();
-                txt_Membresia.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
+                txt_estatus.Text = cliente.Dgv_consulta.Rows[cliente.Dgv_consulta.CurrentRow.Index].
                       Cells[5].Value.ToString();
             }
         }
@@ -131,6 +129,33 @@ namespace Laborartorio_FilmMagic.Mantenimiento
             this.Dispose();
         }
 
-        
+        private void btn_buscarP_Click(object sender, EventArgs e)
+        {
+
+            Frm_consultaPuesto memb = new Frm_consultaPuesto();
+            memb.ShowDialog();
+
+            if (memb.DialogResult == DialogResult.OK)
+            {
+
+                txt_Cpuesto.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
+                      Cells[0].Value.ToString();
+
+            }
+        }
+
+        private void btn_buscarD_Click(object sender, EventArgs e)
+        {
+            Frm_consultaDepartamento memb = new Frm_consultaDepartamento();
+            memb.ShowDialog();
+
+            if (memb.DialogResult == DialogResult.OK)
+            {
+
+                txt_CDepartamento.Text = memb.Dgv_consulta.Rows[memb.Dgv_consulta.CurrentRow.Index].
+                      Cells[0].Value.ToString();
+
+            }
+        }
     }
 }

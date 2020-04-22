@@ -1,6 +1,6 @@
 ﻿namespace Laborartorio_FilmMagic.Mantenimientos
 {
-    partial class Frm_MantTipoProducto
+    partial class Frm_MantDepartemento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantTipoProducto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantDepartemento));
             this.lblTitutlo = new System.Windows.Forms.Label();
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
             this.btn_Ayuda = new System.Windows.Forms.Button();
@@ -45,6 +45,8 @@
             this.Lbl_cod = new System.Windows.Forms.Label();
             this.Txt_Cod = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Txt_estado = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Pnl_nombreForm.SuspendLayout();
             this.gpb_datos.SuspendLayout();
             this.SuspendLayout();
@@ -57,13 +59,13 @@
             this.lblTitutlo.Location = new System.Drawing.Point(20, 12);
             this.lblTitutlo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitutlo.Name = "lblTitutlo";
-            this.lblTitutlo.Size = new System.Drawing.Size(332, 20);
+            this.lblTitutlo.Size = new System.Drawing.Size(303, 20);
             this.lblTitutlo.TabIndex = 0;
-            this.lblTitutlo.Text = "MANTENIMIENTO TIPO DE PRODUCTO";
+            this.lblTitutlo.Text = "MANTENIMIENTO DEPARTAMENTO";
             // 
             // Pnl_nombreForm
             // 
-            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Pnl_nombreForm.Controls.Add(this.btn_Ayuda);
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.lblTitutlo);
@@ -114,7 +116,7 @@
             // 
             // Btn_consultar
             // 
-            this.Btn_consultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Btn_consultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Btn_consultar.FlatAppearance.BorderSize = 3;
             this.Btn_consultar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.Btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -136,7 +138,7 @@
             // 
             // Btn_borrar
             // 
-            this.Btn_borrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Btn_borrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Btn_borrar.FlatAppearance.BorderSize = 3;
             this.Btn_borrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.Btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -158,7 +160,7 @@
             // 
             // Btn_guardar
             // 
-            this.Btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Btn_guardar.FlatAppearance.BorderSize = 3;
             this.Btn_guardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.Btn_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -180,7 +182,7 @@
             // 
             // Btn_editar
             // 
-            this.Btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Btn_editar.FlatAppearance.BorderSize = 3;
             this.Btn_editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.Btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -202,7 +204,7 @@
             // 
             // Btn_ingresar
             // 
-            this.Btn_ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Btn_ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Btn_ingresar.FlatAppearance.BorderSize = 3;
             this.Btn_ingresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.Btn_ingresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -224,6 +226,8 @@
             // 
             // gpb_datos
             // 
+            this.gpb_datos.Controls.Add(this.Txt_estado);
+            this.gpb_datos.Controls.Add(this.label1);
             this.gpb_datos.Controls.Add(this.Txt_nombre);
             this.gpb_datos.Controls.Add(this.Lbl_nom);
             this.gpb_datos.Controls.Add(this.Lbl_cod);
@@ -233,14 +237,14 @@
             this.gpb_datos.Margin = new System.Windows.Forms.Padding(2);
             this.gpb_datos.Name = "gpb_datos";
             this.gpb_datos.Padding = new System.Windows.Forms.Padding(2);
-            this.gpb_datos.Size = new System.Drawing.Size(471, 117);
+            this.gpb_datos.Size = new System.Drawing.Size(471, 143);
             this.gpb_datos.TabIndex = 80;
             this.gpb_datos.TabStop = false;
             this.gpb_datos.Text = "Datos";
             // 
             // Txt_nombre
             // 
-            this.Txt_nombre.Location = new System.Drawing.Point(220, 68);
+            this.Txt_nombre.Location = new System.Drawing.Point(197, 68);
             this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_nombre.Name = "Txt_nombre";
             this.Txt_nombre.Size = new System.Drawing.Size(232, 23);
@@ -249,31 +253,31 @@
             // Lbl_nom
             // 
             this.Lbl_nom.AutoSize = true;
-            this.Lbl_nom.Font = new System.Drawing.Font("Shink", 8.25F);
+            this.Lbl_nom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nom.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_nom.Location = new System.Drawing.Point(20, 74);
+            this.Lbl_nom.Location = new System.Drawing.Point(62, 72);
             this.Lbl_nom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_nom.Name = "Lbl_nom";
-            this.Lbl_nom.Size = new System.Drawing.Size(46, 15);
+            this.Lbl_nom.Size = new System.Drawing.Size(64, 16);
             this.Lbl_nom.TabIndex = 2;
             this.Lbl_nom.Text = "Nombre:";
             // 
             // Lbl_cod
             // 
             this.Lbl_cod.AutoSize = true;
-            this.Lbl_cod.Font = new System.Drawing.Font("Shink", 8.25F);
+            this.Lbl_cod.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_cod.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_cod.Location = new System.Drawing.Point(20, 34);
+            this.Lbl_cod.Location = new System.Drawing.Point(62, 38);
             this.Lbl_cod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_cod.Name = "Lbl_cod";
-            this.Lbl_cod.Size = new System.Drawing.Size(97, 15);
+            this.Lbl_cod.Size = new System.Drawing.Size(60, 16);
             this.Lbl_cod.TabIndex = 1;
-            this.Lbl_cod.Text = "COD Tipo Producto:";
+            this.Lbl_cod.Text = "Codigo:";
             // 
             // Txt_Cod
             // 
             this.Txt_Cod.Enabled = false;
-            this.Txt_Cod.Location = new System.Drawing.Point(220, 34);
+            this.Txt_Cod.Location = new System.Drawing.Point(197, 34);
             this.Txt_Cod.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Cod.Name = "Txt_Cod";
             this.Txt_Cod.Size = new System.Drawing.Size(232, 23);
@@ -282,20 +286,41 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(192, 305);
+            this.label2.Location = new System.Drawing.Point(193, 333);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(339, 19);
             this.label2.TabIndex = 96;
             this.label2.Text = "Conny María Barrios Moreno - 0901 15 4555";
             // 
+            // Txt_estado
+            // 
+            this.Txt_estado.Location = new System.Drawing.Point(196, 103);
+            this.Txt_estado.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_estado.MaxLength = 1;
+            this.Txt_estado.Name = "Txt_estado";
+            this.Txt_estado.Size = new System.Drawing.Size(232, 23);
+            this.Txt_estado.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(62, 107);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Estado:";
+            // 
             // Frm_MantTipoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 340);
+            this.ClientSize = new System.Drawing.Size(544, 365);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gpb_datos);
             this.Controls.Add(this.Pnl_nombreForm);
@@ -335,5 +360,7 @@
         private System.Windows.Forms.Label Lbl_cod;
         private System.Windows.Forms.TextBox Txt_Cod;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Txt_estado;
+        private System.Windows.Forms.Label label1;
     }
 }

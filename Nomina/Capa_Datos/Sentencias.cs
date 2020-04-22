@@ -18,7 +18,7 @@ namespace Capa_Datos
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into conceptos values(" + sCodigo + ", '" + sNombre + "' ,'" + sEfecto + "','" + sEstado + "')';";
+                string consulta = "insert into concepto values(" + sCodigo + ", '" + sNombre + "' ,'" + sEfecto + "','" + sEstado + "')';";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -31,12 +31,13 @@ namespace Capa_Datos
         }
 
         //---------------Modificar Conceptos
-        public OdbcDataReader modificarConceptos(string sCodigo, string sNombre, string sDescripcion, string sValor,string sTipoOp)
+        public OdbcDataReader modificarConceptos(string sCodigo, string sNombre, string sEfecto, string sEstado)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE conceptos set nombre='" + sNombre + "', descripcion='" + sDescripcion + "'" + ", valor = " + sValor +", tipo_operacion= "+sTipoOp+ " where pkidconcepto = " + sCodigo + ";";
+                string consulta = "UPDATE concepto set nombre_concepto='" + sNombre + "', efecto_concepto='" + sEfecto + "'" 
+                    + ", estatus_concepto = " + sEstado + " where codigo_concepto = " + sCodigo + ";";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -54,7 +55,7 @@ namespace Capa_Datos
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE conceptos set estado='0' where pkidconcepto='" + sCodigo + "';";
+                string consulta = "UPDATE concepto set estatus_concepto='0' where codigo_concepto='" + sCodigo + "';";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -72,7 +73,79 @@ namespace Capa_Datos
             try
             {
                 cn.conexionbd();
-                string consulta = "SELECT * FROM conceptos WHERE estado = 1 ;";
+                string consulta = "SELECT * FROM concepto WHERE estatus_concepto = 1 ;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //---------------Insertar Puesto
+        public OdbcDataReader InsertarPuesto(string sCodigo, string sNombre, string sEstado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into puesto values(" + sCodigo + ", '" + sNombre + "' ,'" + sEstado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //---------------Modificar Puesto
+        public OdbcDataReader modificarPuesto(string sCodigo, string sNombre, string sEstado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE puesto set nombre_puesto='" + sNombre + "', estatus_puesto='" + sEstado + "' where codigo_puesto = " + sCodigo + ";";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //---------------Eliminar Puesto
+        public OdbcDataReader eliminarPuesto(string sCodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE puesto set estatus_puesto='0' where codigo_puesto='" + sCodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //----------Consultar Puesto
+        public OdbcDataReader consultaPuesto()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT * FROM puesto WHERE estatus_puesto = 1 ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -85,12 +158,12 @@ namespace Capa_Datos
         }
 
         //---------------Insertar Empleados
-        public OdbcDataReader InsertarEmpleados(string sCodigo, string sNombre, string sFechaE, string sFechaV)
+        public OdbcDataReader InsertarEmpleados(string sCodigo, string sNombre, string sCP, string sCD, string sSueldo, string sEstatus)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into membresia values(" + sCodigo + ", '" + sNombre + "' ,'" + sFechaE + "','" + sFechaV + "',1);";
+                string consulta = "insert into empleado values(" + sCodigo + ", '" + sNombre + "' ,'" + sCP + "','" + sCD + "'," + sSueldo + ",'"+sEstatus+"');";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -102,13 +175,14 @@ namespace Capa_Datos
             }
         }
 
-        //---------------Modificar Membresia
-        public OdbcDataReader modificarMembresia(string sCodigo, string sNombre, string sFechaE, string sFechaV)
+        //---------------Modificar Empleados
+        public OdbcDataReader modificarEmpleados(string sCodigo, string sNombre, string sCP, string sCD, string sSueldo, string sEstatus)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE membresia set nombre='" + sNombre + "', fecha_emision='" + sFechaE + "'" + ", fecha_caducicad = '" + sFechaV + "' where pkidmembresia = " + sCodigo + ";";
+                string consulta = "UPDATE empleado set nombre_empleado='" + sNombre + "', codigo_puesto='" + sCP + "'" + ", codigo_departamento = '" + sCD
+                    + "', sueldo_empleado= " + sSueldo +"', estatus_empleado'" + sEstatus  + " where codigo_empleado = " + sCodigo + ";";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -120,13 +194,13 @@ namespace Capa_Datos
             }
         }
 
-        //---------------Eliminar Membresia
-        public OdbcDataReader eliminarMembresia(string sCodigo)
+        //---------------Eliminar Empleados
+        public OdbcDataReader eliminarEmpleados(string sCodigo)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE membresia set estado='0' where pkidmembresia='" + sCodigo + "';";
+                string consulta = "UPDATE empleado set estatus_empleado='0' where codigo_empleado='" + sCodigo + "';";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -138,85 +212,13 @@ namespace Capa_Datos
             }
         }
 
-        //----------Consultar Membresia
-        public OdbcDataReader consultaMembresia()
+        //----------Consultar Empleados
+        public OdbcDataReader consultaEmpleados()
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "SELECT * FROM Membresia WHERE estado = 1 ;";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
-
-        //---------------Insertar Cliente
-        public OdbcDataReader InsertarCliente(string sCodigo, string sNombre, string sDireccion, string telefono, string sCMembresia, string Fecha)
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "insert into cliente values(" + sCodigo + ", '" + sNombre + "' ,'" + sDireccion + "','" + telefono + "',1," + sCMembresia + ",'"+Fecha+"');";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
-
-        //---------------Modificar Cliente
-        public OdbcDataReader modificarCliente(string sCodigo, string sNombre, string sDireccion, string telefono, string sCMembresia)
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "UPDATE clientes set nombre='" + sNombre + "', direccion='" + sDireccion + "'" + ", telefono = '" + telefono + "', fkidmembresia= " + sCMembresia + " where pkidcliente = " + sCodigo + ";";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
-
-        //---------------Eliminar Conceptos
-        public OdbcDataReader eliminarCliente(string sCodigo)
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "UPDATE cliente set estado='0' where pkidcliente='" + sCodigo + "';";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
-
-        //----------Consultar Cliente
-        public OdbcDataReader consultaCliente()
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "SELECT * FROM cliente WHERE estado = 1 ;";
+                string consulta = "SELECT * FROM empleado WHERE estatus_empleado = 1 ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -250,13 +252,13 @@ namespace Capa_Datos
             return camporesultante;
         }
 
-        //---------------------------------------------------------------UPDATE TIPO DE PRODUCTO-----------------------------------------------------------------------------------------//
-        public OdbcDataReader modificarTipo(string sCodigo, string sNombre)
+        //---------------------------------------------------------------UPDATE DEPARTAMENTO-----------------------------------------------------------------------------------------//
+        public OdbcDataReader modificarDepartamento(string sCodigo, string sNombre, string sEstado)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE tipo_producto set nombre='" + sNombre + "' where pkidtipoproducto = " + sCodigo + ";";
+                string consulta = "UPDATE departamento set nombre_departamento='" + sNombre + "estado_departamento" + sEstado + "' where codigo_departamento = " + sCodigo + ";";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -268,13 +270,13 @@ namespace Capa_Datos
             }
         }
 
-        //---------------------------------------------------------------INSERT TIPO DE PRODUCTO------------------------------------------------------------------------------------------//
-        public OdbcDataReader insertarTipo(string sCodigo, string sNombre)
+        //---------------------------------------------------------------INSERT DEPARTAMENTO------------------------------------------------------------------------------------------//
+        public OdbcDataReader insertarDepartamento(string sCodigo, string sNombre, string sEstado)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into tipo_producto values(" + sCodigo + ", '" + sNombre + "' ," + "1);";
+                string consulta = "insert into departamento values(" + sCodigo + ", '" + sNombre + "' ," + sEstado + ");";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -286,13 +288,13 @@ namespace Capa_Datos
             }
         }
 
-        //--------------------------------------------------------------ELIMINAR TIPO DE PRODUCTO-----------------------------------------------------------------------------------------//
-        public OdbcDataReader eliminarTipo(string sCodigo)
+        //--------------------------------------------------------------ELIMINAR DEPARTAMENTO-----------------------------------------------------------------------------------------//
+        public OdbcDataReader eliminarDepartamento(string sCodigo)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE tipo_producto set estado='0' where pkidtipoproducto ='" + sCodigo + "';";
+                string consulta = "UPDATE departamento set estatus_departamento='0' where codigo_departamento ='" + sCodigo + "';";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -304,13 +306,13 @@ namespace Capa_Datos
             }
         }
 
-        //---------------------------------------------------------------CONSULTA TIPO CATEGORIA------------------------------------------------------------------------------------------//
-        public OdbcDataReader consultaTipo()
+        //---------------------------------------------------------------CONSULTA DEPARTAMENTO------------------------------------------------------------------------------------------//
+        public OdbcDataReader consultaDepartamento()
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "SELECT * FROM tipo_producto WHERE estado = 1 ;";
+                string consulta = "SELECT * FROM departamento WHERE codigo_departamento = 1 ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -321,6 +323,7 @@ namespace Capa_Datos
                 return null;
             }
         }
+    
 
         /*categoria*/
 
