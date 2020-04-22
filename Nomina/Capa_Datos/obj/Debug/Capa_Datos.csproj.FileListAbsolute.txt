@@ -1,0 +1,30 @@
+C:\Users\prueb\Desktop\Laborartorio_FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\prueb\Desktop\Laborartorio_FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\prueb\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\prueb\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Angel Solares\Desktop\Laborartorio_FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Angel Solares\Desktop\Laborartorio_FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Angel Solares\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Angel Solares\Desktop\Laborartorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\Laboratorio\LaboratorioFilmagic\FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\Laboratorio\LaboratorioFilmagic\FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\Laboratorio\LaboratorioFilmagic\FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\Laboratorio\LaboratorioFilmagic\FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\Laboratorio\LaboratorioFilmagic\FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Segundo Proyecto\Laboratorio\LaboratorioFilmagic\FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laboratorio_FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laboratorio_FilmMagic\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laboratorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laboratorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laboratorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laboratorio_FilmMagic\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Conny\Desktop\Nomina\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Conny\Desktop\Nomina\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.pdb
