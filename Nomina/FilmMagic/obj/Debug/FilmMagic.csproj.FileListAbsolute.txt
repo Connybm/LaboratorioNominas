@@ -1,0 +1,13 @@
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\FilmMagic.csprojAssemblyReference.cache
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.MenuPrincipal.resources
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\FilmMagic.csproj.GenerateResource.cache
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.exe
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.pdb
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\bin\Debug\Laborartorio_FilmMagic.exe.config
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\bin\Debug\Laborartorio_FilmMagic.exe
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\bin\Debug\Laborartorio_FilmMagic.pdb
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\bin\Debug\Capa_Logica.dll
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\bin\Debug\Capa_Logica.pdb
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Properties.Resources.resources
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\FilmMagic.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Downloads\LaboratorioFM-master\Laborartorio_FilmMagic\Laborartorio_FilmMagic\obj\Debug\FilmMagic.csproj.CopyComplete
