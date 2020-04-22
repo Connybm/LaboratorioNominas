@@ -132,32 +132,9 @@ namespace Laborartorio_FilmMagic
         }
 
 
-        bool ventanaPuesto = false;
-        Frm_MantPuesto pues= new Frm_MantPuesto();
-        private void MembresiaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPuesto);
-            if (ventanaPuesto == false || frmC == null)
-            {
-                if (frmC == null)
-                {
-                    pues = new Frm_MantPuesto();
-                }
-
-                pues.MdiParent = this;
-                pues.Show();
-                Application.DoEvents();
-                ventanaPuesto = true;
-            }
-            else
-            {
-                pues.WindowState = System.Windows.Forms.FormWindowState.Normal;
-            }
-        }
-
         bool ventanaEmpleado = false;
         Frm_MantEmpleado empleado = new Frm_MantEmpleado();
-        private void ClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MembresiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
             if (ventanaEmpleado == false || frmC == null)
@@ -178,27 +155,50 @@ namespace Laborartorio_FilmMagic
             }
         }
 
-
-        bool ventanaTipo = false;
-        Frm_MantTipoProducto tipo = new Frm_MantTipoProducto();
-        private void TipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        bool ventanaPuesto = false;
+        Frm_MantPuesto puesto = new Frm_MantPuesto();
+        private void ClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantTipoProducto);
-            if (ventanaTipo == false || frmC == null)
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPuesto);
+            if (ventanaPuesto == false || frmC == null)
             {
                 if (frmC == null)
                 {
-                    tipo = new Frm_MantTipoProducto();
+                    puesto = new Frm_MantPuesto();
                 }
 
-                tipo.MdiParent = this;
-                tipo.Show();
+                puesto.MdiParent = this;
+                puesto.Show();
                 Application.DoEvents();
-                ventanaTipo = true;
+                ventanaPuesto = true;
             }
             else
             {
-                tipo.WindowState = System.Windows.Forms.FormWindowState.Normal;
+                puesto.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+
+        bool ventanaDepa = false;
+        Frm_MantDepartemento depa = new Frm_MantDepartemento();        
+        private void TipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantDepartemento);
+            if (ventanaDepa == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    depa = new Frm_MantDepartemento();
+                }
+
+                depa.MdiParent = this;
+                depa.Show();
+                Application.DoEvents();
+                ventanaDepa = true;
+            }
+            else
+            {
+                depa.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
 

@@ -28,3 +28,9 @@ C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyRefe
 C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
 C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.dll
 C:\Users\Conny\Desktop\Nomina\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Capa_Datos\obj\Debug\Capa_Datos.pdb

@@ -36,10 +36,9 @@
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consulta = new System.Windows.Forms.DataGridView();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.Pnl_nombreForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
@@ -47,7 +46,7 @@
             // 
             // Pnl_nombreForm
             // 
-            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.lblTitulo);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
@@ -75,12 +74,13 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(58, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(20, 12);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(215, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(179, 20);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "CONSULTA MEMBRESIA";
+            this.lblTitulo.Text = "CONSULTA PUESTO";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // btn_cerrar
             // 
@@ -138,10 +138,9 @@
             this.Dgv_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_consulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_consulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cod,
-            this.nom,
-            this.des,
-            this.valor});
+            this.Codigo,
+            this.Nombre,
+            this.Estatus});
             this.Dgv_consulta.Location = new System.Drawing.Point(12, 71);
             this.Dgv_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dgv_consulta.Name = "Dgv_consulta";
@@ -153,38 +152,28 @@
             this.Dgv_consulta.Size = new System.Drawing.Size(722, 262);
             this.Dgv_consulta.TabIndex = 80;
             // 
-            // cod
+            // Codigo
             // 
-            this.cod.HeaderText = "COD";
-            this.cod.MinimumWidth = 6;
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             // 
-            // nom
+            // Nombre
             // 
-            this.nom.HeaderText = "Nombre";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
-            // des
+            // Estatus
             // 
-            this.des.HeaderText = "Fecha Emision";
-            this.des.MinimumWidth = 6;
-            this.des.Name = "des";
-            this.des.ReadOnly = true;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Fecha Vencimiento";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(546, 349);
@@ -193,7 +182,7 @@
             this.label1.TabIndex = 91;
             this.label1.Text = "Conny María Barrios Moreno - 0901 15 4555";
             // 
-            // Frm_consultaMembresia
+            // Frm_consultaPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +193,7 @@
             this.Controls.Add(this.Dgv_consulta);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_consultaMembresia";
+            this.Name = "Frm_consultaPuesto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_consultaMembresia";
             this.Load += new System.EventHandler(this.Frm_consultaMembresia_Load);
@@ -225,10 +214,9 @@
         private System.Windows.Forms.Button Btn_actualizar;
         private System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.DataGridView Dgv_consulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn des;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
     }
 }

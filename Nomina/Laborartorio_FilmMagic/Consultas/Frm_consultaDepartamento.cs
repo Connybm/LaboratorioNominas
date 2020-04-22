@@ -25,12 +25,12 @@ namespace Laborartorio_FilmMagic.Consultas
         //-----------------------------------------------------------------------------------para mostrar en DGV------------------------------------------------------------------------------
         public void MostrarConsulta()
         {
-            OdbcDataReader mostrar = logic.consultaTipo();
+            OdbcDataReader mostrar = logic.consultaDepartamento();
             try
             {
                 while (mostrar.Read())
                 {
-                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1));
+                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2));
                 }
             }
             catch (Exception err)

@@ -22,3 +22,27 @@ C:\Users\Conny\Desktop\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Datos.dll
 C:\Users\Conny\Desktop\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Logica.pdb
 C:\Users\Conny\Desktop\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Datos.pdb
 C:\Users\Conny\Desktop\Nomina\Laborartorio_FilmMagic\obj\Debug\Nominas.csproj.CopyComplete
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Nominas.csprojAssemblyReference.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Consultas.Frm_consultaEmpleado.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Consultas.Frm_consultaConcepto.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Consultas.Frm_consultaPuesto.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Consultas.Frm_consultaDepartamento.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Mantenimiento.Frm_MantEmpleado.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Mnt_Concepto.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Mantenimiento.Frm_MantPuesto.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Mantenimientos.Frm_MantDepartemento.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.MenuPrincipal.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Procesos.Proceso_Nomina.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.Properties.Resources.resources
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Nominas.csproj.GenerateResource.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Nominas.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Laborartorio_FilmMagic.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Laborartorio_FilmMagic.exe.config
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Laborartorio_FilmMagic.exe
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Laborartorio_FilmMagic.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Logica.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Datos.dll
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Logica.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\bin\Debug\Capa_Datos.pdb
+C:\Users\Conny\Documents\Carrera U\Ingenieria\9. Noveno Semestre\2. Ingenieria de Software\Laboratorio 2\LaboratorioNominas\Nomina\Laborartorio_FilmMagic\obj\Debug\Nominas.csproj.CopyComplete

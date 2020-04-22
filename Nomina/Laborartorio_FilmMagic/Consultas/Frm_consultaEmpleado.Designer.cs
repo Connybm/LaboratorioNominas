@@ -36,20 +36,20 @@
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consulta = new System.Windows.Forms.DataGridView();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sueldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_nombreForm
             // 
-            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.lblTitulo);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
@@ -77,12 +77,12 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(58, 15);
+            this.lblTitulo.Location = new System.Drawing.Point(27, 12);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(182, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(205, 20);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "CONSULTA CLIENTE";
+            this.lblTitulo.Text = "CONSULTA EMPLEADO";
             // 
             // btn_cerrar
             // 
@@ -105,7 +105,7 @@
             this.Btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_actualizar.Location = new System.Drawing.Point(766, 189);
+            this.Btn_actualizar.Location = new System.Drawing.Point(751, 116);
             this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(123, 33);
@@ -122,7 +122,7 @@
             this.Btn_seleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_seleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_seleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_seleccionar.Location = new System.Drawing.Point(766, 248);
+            this.Btn_seleccionar.Location = new System.Drawing.Point(751, 175);
             this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_seleccionar.Name = "Btn_seleccionar";
             this.Btn_seleccionar.Size = new System.Drawing.Size(123, 33);
@@ -140,13 +140,13 @@
             this.Dgv_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_consulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_consulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cod,
-            this.nom,
-            this.des,
-            this.valor,
-            this.Column2,
-            this.Column1});
-            this.Dgv_consulta.Location = new System.Drawing.Point(15, 94);
+            this.codigo,
+            this.Nombre,
+            this.Codigo_Puesto,
+            this.Codigo_Departamento,
+            this.Sueldo,
+            this.Estatus});
+            this.Dgv_consulta.Location = new System.Drawing.Point(12, 64);
             this.Dgv_consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dgv_consulta.Name = "Dgv_consulta";
             this.Dgv_consulta.ReadOnly = true;
@@ -157,70 +157,66 @@
             this.Dgv_consulta.Size = new System.Drawing.Size(722, 262);
             this.Dgv_consulta.TabIndex = 80;
             // 
-            // cod
-            // 
-            this.cod.HeaderText = "COD";
-            this.cod.MinimumWidth = 6;
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nombre";
-            this.nom.MinimumWidth = 6;
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            // 
-            // des
-            // 
-            this.des.HeaderText = "Direccion";
-            this.des.MinimumWidth = 6;
-            this.des.Name = "des";
-            this.des.ReadOnly = true;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Telefono";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fecha Nacimiento";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "COD Membresia";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(43)))), ((int)(((byte)(119)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(560, 372);
+            this.label1.Location = new System.Drawing.Point(554, 340);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(339, 19);
             this.label1.TabIndex = 90;
             this.label1.Text = "Conny María Barrios Moreno - 0901 15 4555";
             // 
-            // Frm_consultaCliente
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Codigo_Puesto
+            // 
+            this.Codigo_Puesto.HeaderText = "Codigo Puesto";
+            this.Codigo_Puesto.Name = "Codigo_Puesto";
+            this.Codigo_Puesto.ReadOnly = true;
+            // 
+            // Codigo_Departamento
+            // 
+            this.Codigo_Departamento.HeaderText = "CodigoDepartamento";
+            this.Codigo_Departamento.Name = "Codigo_Departamento";
+            this.Codigo_Departamento.ReadOnly = true;
+            // 
+            // Sueldo
+            // 
+            this.Sueldo.HeaderText = "Sueldo";
+            this.Sueldo.Name = "Sueldo";
+            this.Sueldo.ReadOnly = true;
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
+            // 
+            // Frm_consultaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 413);
+            this.ClientSize = new System.Drawing.Size(905, 375);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_consulta);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_consultaCliente";
+            this.Name = "Frm_consultaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_consultaCliente";
             this.Load += new System.EventHandler(this.Frm_consultaCliente_Load);
@@ -241,12 +237,12 @@
         private System.Windows.Forms.Button Btn_actualizar;
         private System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.DataGridView Dgv_consulta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn des;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Puesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Departamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sueldo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
     }
 }

@@ -22,12 +22,12 @@ namespace Laborartorio_FilmMagic.Consultas
 
         public void MostrarConsulta()
         {
-            OdbcDataReader mostrar = logic.consultarMembresia();
+            OdbcDataReader mostrar = logic.consultarPuesto();
             try
             {
                 while (mostrar.Read())
                 {
-                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3));
+                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2));
                 }
             }
             catch (Exception err)
@@ -68,6 +68,11 @@ namespace Laborartorio_FilmMagic.Consultas
         private void Btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

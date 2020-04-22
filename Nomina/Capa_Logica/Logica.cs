@@ -25,9 +25,9 @@ namespace Capa_Logica
         }
 
         //----Modificar Concepto
-        public OdbcDataReader modificarConcepto(string sCodigo, string sNombre, string sDescripcion, string sValor, string sTipoOp)
+        public OdbcDataReader modificarConcepto(string sCodigo, string sNombre, string sEfecto, string sEstado)
         {
-            return sn.modificarConceptos(sCodigo, sNombre, sDescripcion, sValor, sTipoOp);
+            return sn.modificarConceptos(sCodigo, sNombre, sEfecto, sEstado);
         }
 
         //----Eliminar Concepto
@@ -42,76 +42,76 @@ namespace Capa_Logica
             return sn.consultaConcepto();
         }
 
-        //----Insertar Membresia
-        public OdbcDataReader InsertarMembresia(string sCodigo, string sNombre, string sFechaE, string sFechaV)
+        //----Insertar Puesto
+        public OdbcDataReader InsertarPuesto(string sCodigo, string sNombre, string sEstado)
         {
-            return sn.InsertarEmpleados(sCodigo, sNombre, sFechaE, sFechaV);
+            return sn.InsertarPuesto(sCodigo, sNombre, sEstado);
         }
 
-        //----Modificar Membresia
-        public OdbcDataReader modificarMembresia(string sCodigo, string sNombre, string sFechaE, string sFechaV)
+        //----Modificar Puesto
+        public OdbcDataReader modificarPuesto(string sCodigo, string sNombre, string sEstado)
         {
-            return sn.modificarMembresia(sCodigo, sNombre,sFechaE, sFechaV);
+            return sn.modificarPuesto(sCodigo, sNombre, sEstado);
         }
 
-        //----Eliminar Concepto
-        public OdbcDataReader eliminarMembresia(string sCodigo)
+        //----Eliminar Puesto
+        public OdbcDataReader eliminarPuesto(string sCodigo)
         {
-            return sn.eliminarMembresia(sCodigo);
+            return sn.eliminarPuesto(sCodigo);
         }
 
-        //-----Consultar Concepto
-        public OdbcDataReader consultarMembresia()
+        //-----Consultar Puesto
+        public OdbcDataReader consultarPuesto()
         {
-            return sn.consultaMembresia();
+            return sn.consultaPuesto();
         }
 
-        //----Insertar Cliente
-        public OdbcDataReader InsertarCliente(string sCodigo, string sNombre, string sDireccion, string sTelefono, string sCMembresia, string sFecha)
+        //----Insertar Empleado
+        public OdbcDataReader InsertarEmpleado(string sCodigo, string sNombre, string sCP, string sCD, string sSueldo, string sEstatus)
         {
-            return sn.InsertarCliente(sCodigo, sNombre, sDireccion, sTelefono, sCMembresia,sFecha);
+            return sn.InsertarEmpleados(sCodigo, sNombre, sCP, sCD, sSueldo,sEstatus);
         }
 
-        //----Modificar Cliente
-        public OdbcDataReader modificarCliente(string sCodigo, string sNombre, string sDireccion, string sTelefono, string sCMembresia)
+        //----Modificar Empleado
+        public OdbcDataReader modificarEmpleado(string sCodigo, string sNombre, string sCP, string sCD, string sSueldo, string sEstatus)
         {
-            return sn.modificarCliente(sCodigo, sNombre, sDireccion, sTelefono, sCMembresia);
+            return sn.modificarEmpleados(sCodigo, sNombre, sCP, sCD, sSueldo, sEstatus);
         }
 
-        //----Eliminar Concepto
-        public OdbcDataReader eliminarCliente(string sCodigo)
+        //----Eliminar Empleado
+        public OdbcDataReader eliminarEmpleado(string sCodigo)
         {
-            return sn.eliminarCliente(sCodigo);
+            return sn.eliminarEmpleados(sCodigo);
         }
 
-        //-----Consultar Concepto
-        public OdbcDataReader consultarCliente()
+        //-----Consultar Empleado
+        public OdbcDataReader consultarEmpleado()
         {
-            return sn.consultaCliente();
+            return sn.consultaEmpleados();
         }
-      
-        //------------------------------------------------------------------------------------------------------UPDATE TIPO DE PRODUCTO------------------------------------------------------//
-        public OdbcDataReader modificarTipo(string sCodigo, string sNombre)
+
+        //------------------------------------------------------------------------------------------------------UPDATE DEPARTAMENTO------------------------------------------------------//
+        public OdbcDataReader modificarDepartamento(string sCodigo, string sNombre, string sEstado)
         {
-            return sn.modificarTipo(sCodigo, sNombre);
+            return sn.modificarDepartamento(sCodigo, sNombre, sEstado);
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
-        //------------------------------------------------------------------------------------------------------INSERTAR TIPO DE PRODUCTO------------------------------------------------------//
-        public OdbcDataReader insertarTipo(string sCodigo, string sNombre)
+        //------------------------------------------------------------------------------------------------------INSERTAR DEPARTAMENTO------------------------------------------------------//
+        public OdbcDataReader insertarDepartamento(string sCodigo, string sNombre, string sEstado)
         {
-            return sn.insertarTipo(sCodigo, sNombre);
+            return sn.insertarDepartamento(sCodigo, sNombre, sEstado);
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
-        //------------------------------------------------------------------------------------------------------ELIMINAR TIPO DE PRODUCTO-----------------------------------------------------//
-        public OdbcDataReader eliminarTipo(string sCodigo)
+        //------------------------------------------------------------------------------------------------------ELIMINAR DEPARTAMENTO-----------------------------------------------------//
+        public OdbcDataReader eliminarDepartamento(string sCodigo)
         {
-            return sn.eliminarTipo(sCodigo);
+            return sn.eliminarDepartamento(sCodigo);
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
-        //------------------------------------------------------------------------------------------------------CONSULTA TIPO-------------------------------------------------------//
-        public OdbcDataReader consultaTipo()
+        //------------------------------------------------------------------------------------------------------CONSULTA DEPARTAMENTO-------------------------------------------------------//
+        public OdbcDataReader consultaDepartamento()
         {
-            return sn.consultaTipo();
+            return sn.consultaDepartamento();
         }
 
         /*categoria*/
