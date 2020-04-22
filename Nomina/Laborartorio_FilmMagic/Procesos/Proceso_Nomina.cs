@@ -39,7 +39,6 @@ namespace Laborartorio_FilmMagic.Procesos
         {
             this.Dispose();
         }
-
        
         private void Btn_buscarS_Click(object sender, EventArgs e)
         {
