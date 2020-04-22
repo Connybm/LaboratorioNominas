@@ -45,6 +45,12 @@
             this.txt_empleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Dgv_MovIntDetalles = new System.Windows.Forms.DataGridView();
+            this.Codigo_Nomina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_concepto = new System.Windows.Forms.TextBox();
@@ -55,12 +61,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_valor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Codigo_Nomina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm.SuspendLayout();
             this.Gpb_Encabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_MovIntDetalles)).BeginInit();
@@ -248,6 +248,36 @@
             this.Dgv_MovIntDetalles.Size = new System.Drawing.Size(607, 176);
             this.Dgv_MovIntDetalles.TabIndex = 8;
             // 
+            // Codigo_Nomina
+            // 
+            this.Codigo_Nomina.HeaderText = "Codigo Nomina";
+            this.Codigo_Nomina.Name = "Codigo_Nomina";
+            // 
+            // FechaInicial
+            // 
+            this.FechaInicial.HeaderText = "Fecha Inicial";
+            this.FechaInicial.Name = "FechaInicial";
+            // 
+            // FechaFinal
+            // 
+            this.FechaFinal.HeaderText = "FechaFinal";
+            this.FechaFinal.Name = "FechaFinal";
+            // 
+            // Empleado
+            // 
+            this.Empleado.HeaderText = "Empleado";
+            this.Empleado.Name = "Empleado";
+            // 
+            // Concepto
+            // 
+            this.Concepto.HeaderText = "Concepto";
+            this.Concepto.Name = "Concepto";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -341,7 +371,6 @@
             // 
             // txt_valor
             // 
-            this.txt_valor.Enabled = false;
             this.txt_valor.Location = new System.Drawing.Point(363, 69);
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(106, 20);
@@ -358,36 +387,6 @@
             this.label5.Size = new System.Drawing.Size(36, 15);
             this.label5.TabIndex = 115;
             this.label5.Text = "Valor";
-            // 
-            // Codigo_Nomina
-            // 
-            this.Codigo_Nomina.HeaderText = "Codigo Nomina";
-            this.Codigo_Nomina.Name = "Codigo_Nomina";
-            // 
-            // FechaInicial
-            // 
-            this.FechaInicial.HeaderText = "Fecha Inicial";
-            this.FechaInicial.Name = "FechaInicial";
-            // 
-            // FechaFinal
-            // 
-            this.FechaFinal.HeaderText = "FechaFinal";
-            this.FechaFinal.Name = "FechaFinal";
-            // 
-            // Empleado
-            // 
-            this.Empleado.HeaderText = "Empleado";
-            this.Empleado.Name = "Empleado";
-            // 
-            // Concepto
-            // 
-            this.Concepto.HeaderText = "Concepto";
-            this.Concepto.Name = "Concepto";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
             // 
             // Proceso_Nomina
             // 

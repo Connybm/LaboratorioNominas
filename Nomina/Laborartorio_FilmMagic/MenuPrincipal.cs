@@ -16,96 +16,9 @@ namespace Laborartorio_FilmMagic
 {
     public partial class MenuPrincipal : Form
     {
-        private int childFormNumber = 0;
-
         public MenuPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
-            childForm.Show();
-        }
-
-        private void OpenFile(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
-        }
-
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-        }
-
-        private void ToolStripStatusLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EditMenu_Click(object sender, EventArgs e)
-        {
-
         }
 
         bool ventanaConcepto = false;
@@ -130,7 +43,6 @@ namespace Laborartorio_FilmMagic
                 concepto.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
-
 
         bool ventanaEmpleado = false;
         Frm_MantEmpleado empleado = new Frm_MantEmpleado();
@@ -178,7 +90,6 @@ namespace Laborartorio_FilmMagic
             }
         }
 
-
         bool ventanaDepa = false;
         Frm_MantDepartemento depa = new Frm_MantDepartemento();        
         private void TipoProductoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,8 +112,6 @@ namespace Laborartorio_FilmMagic
                 depa.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
-
-
         
         bool ventanaNomina = false;
         Proceso_Nomina nomina = new Proceso_Nomina();

@@ -165,7 +165,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(46, 17);
             this.toolStripStatusLabel.Text = "Estado";
             this.toolStripStatusLabel.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.toolStripStatusLabel.Click += new System.EventHandler(this.ToolStripStatusLabel_Click);
             // 
             // label1
             // 
